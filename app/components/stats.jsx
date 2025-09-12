@@ -5,16 +5,16 @@ import dynamic from "next/dynamic";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
 // ✅ Dynamically import react-simple-maps (fixes SSR issues in Next.js)
-const ComposableMap = dynamic(() =>
-  import("react-simple-maps").then((m) => m.ComposableMap),
+const ComposableMap = dynamic(
+  () => import("react-simple-maps").then((m) => m.ComposableMap),
   { ssr: false }
 );
-const Geographies = dynamic(() =>
-  import("react-simple-maps").then((m) => m.Geographies),
+const Geographies = dynamic(
+  () => import("react-simple-maps").then((m) => m.Geographies),
   { ssr: false }
 );
-const Geography = dynamic(() =>
-  import("react-simple-maps").then((m) => m.Geography),
+const Geography = dynamic(
+  () => import("react-simple-maps").then((m) => m.Geography),
   { ssr: false }
 );
 
@@ -94,20 +94,23 @@ const StatsSection = () => {
     "Saudi Arabia",
   ];
 
-  // Observer to start animation when visible
+  // ✅ Observer to start animation when visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0, // trigger as soon as it enters
+        rootMargin: "0px 0px -10% 0px", // small preload margin
+      }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
-  // Counter animation
+  // ✅ Counter animation
   const CountUpNumber = ({ end, suffix = "", duration = 2000 }) => {
     const [count, setCount] = useState(0);
 
@@ -155,10 +158,12 @@ const StatsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">WHY <span className="text-yellow-400">SEL</span> </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            WHY <span className="text-yellow-400">SEL</span>
+          </h2>
           <p className="text-lg text-white max-w-2xl mx-auto">
-           Over Three decades of engineering excellence delivering reliable solutions
-            worldwide
+            Over Three decades of engineering excellence delivering reliable
+            solutions worldwide
           </p>
         </div>
 
@@ -181,7 +186,10 @@ const StatsSection = () => {
           <h3 className="text-2xl font-bold mb-6">GLOBAL SOURCING NETWORK</h3>
 
           <div className="p-4">
-            <ComposableMap projection="geoMercator" projectionConfig={{ scale: 120 }}>
+            <ComposableMap
+              projection="geoMercator"
+              projectionConfig={{ scale: 120 }}
+            >
               <Geographies geography={geoUrl}>
                 {({ geographies }) =>
                   geographies.map((geo) => {
@@ -218,7 +226,7 @@ const StatsSection = () => {
           </p>
         </div>
 
-        {/* ✅ Certification Badges (Tailwind only) */}
+        {/* ✅ Certification Badges */}
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
           {badges.map((badge, index) => {
             const Icon = badge.icon;
