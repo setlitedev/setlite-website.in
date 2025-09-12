@@ -80,9 +80,12 @@ export const products = {engine: {
         name: "Engines & Powertrains",
         description:"Engines, transmissions, torque converters", image: {
       products: [
-        "/recon2.png",
-        "/pp1.png",
-       "/recon1.png",
+        "/rec1.jpg",
+        "/rec2.png",
+        "/rec3.jpg",
+        "/rec4.jpg",
+        "/rec5.png",
+      
         
       ]
     }

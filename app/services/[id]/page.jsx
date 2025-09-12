@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { ChevronRight, Wrench } from "lucide-react";
 import Footer from "@/app/components/footer";
 import WhyPartner from "@/app/components/whyus";
+import Link from "next/link";
 
 // 1. Hero Component
 const ServiceHero = ({ heroImage, title1, title2, description }) => {
@@ -132,20 +133,20 @@ export default function ServiceDetailPage({ params }) {
 
             {/* CTAs */}
             <div className="mt-12 flex flex-col sm:flex-row gap-6">
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 text-base font-semibold text-yellow-400 hover:text-yellow-500 transition-colors group"
               >
                 Contact Us
                 <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/services"
                 className="inline-flex items-center gap-2 text-base font-semibold text-gray-300 hover:text-white transition-colors group"
               >
                 Explore Other Services
                 <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -276,7 +276,7 @@ const Navbar = () => {
                 <div className="pt-8 space-y-4">
                   <div className="grid grid-cols-1 gap-3">
                     <a
-                      href="tel:+911123311111,23321111,23721111"
+                      href="tel:+911123311111"
                       className="flex items-center justify-center space-x-3 p-4 bg-[#FBC400] text-black rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-medium"
                     >
                       <Phone className="h-5 w-5" />

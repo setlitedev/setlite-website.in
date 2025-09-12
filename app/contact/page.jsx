@@ -1,16 +1,39 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
 import Footer from "../components/footer";
 
 const ContactPage = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Format a structured WhatsApp message
+    const text = encodeURIComponent(
+      `New Contact Form Enquiry:\n
+Name: ${form.name}\n
+Email: ${form.email}\n
+Phone: ${form.phone}\n
+Message: ${form.message}`
+    );
+    const whatsappURL = `https://wa.me/919716001002?text=${text}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="text-white min-h-screen font-sans bg-gradient-to-r from-gray-900 via-black to-gray-950">
-      {/* Navbar */}
-      
       {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Video Background */}
         <video
           className="absolute inset-0 w-full h-full object-cover will-change-transform"
           src="/contvideo.mp4"
@@ -19,15 +42,10 @@ const ContactPage = () => {
           muted
           playsInline
         ></video>
-
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/80 pointer-events-none"></div>
-
-        {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
-            Connect With the{" "}
-            <span className="text-yellow-400">Power of</span>{" "}
+            Connect With the <span className="text-yellow-400">Power of</span>
             <br />
             <span className="text-yellow-400">Reliability</span>
           </h1>
@@ -35,9 +53,9 @@ const ContactPage = () => {
       </section>
 
       {/* Get in Touch Section */}
-      <section className="py-24 px-6 ">
+      <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column - Info */}
+          {/* Left Column */}
           <div className="space-y-8">
             <h2 className="text-3xl font-bold">Get in Touch</h2>
             <div className="flex items-center gap-4 text-gray-300">
@@ -86,7 +104,6 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-            {/* Google Map Embed */}
             <div className="mt-6 rounded-2xl overflow-hidden border border-gray-700 shadow-lg">
               <iframe
                 title="Setlite Engineers Limited Location"
@@ -101,30 +118,41 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Right Column - Form */}
+          {/* Right Column - WhatsApp Form */}
           <div className="bg-[#222427] p-8 rounded-2xl shadow-2xl backdrop-blur-sm border border-[#222427]">
             <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
                 <input
+                  name="name"
                   type="text"
+                  value={form.name}
+                  onChange={handleChange}
                   placeholder="Your name"
                   className="w-full px-4 py-3 bg-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-black placeholder-gray-600"
+                  required
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
                 <input
+                  name="email"
                   type="email"
+                  value={form.email}
+                  onChange={handleChange}
                   placeholder="your.email@example.com"
                   className="w-full px-4 py-3 bg-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-black placeholder-gray-600"
+                  required
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
                 <input
+                  name="phone"
                   type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
                   placeholder="Your phone number"
                   className="w-full px-4 py-3 bg-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-black placeholder-gray-600"
                 />
@@ -132,23 +160,27 @@ const ContactPage = () => {
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                 <textarea
+                  name="message"
                   rows={5}
+                  value={form.message}
+                  onChange={handleChange}
                   placeholder="How can we help you?"
                   className="w-full px-4 py-3 bg-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-black placeholder-gray-600 resize-none"
+                  required
                 ></textarea>
               </div>
               <button
                 type="submit"
                 className="w-full py-3 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-300"
               >
-                Send Message
+                Send Message via WhatsApp
               </button>
             </form>
           </div>
         </div>
       </section>
 
-      {/* Our Locations */}
+      {/* Locations Section (unchanged) */}
       <section className="py-44 px-6 ">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center items-center mb-16">
@@ -161,7 +193,6 @@ const ContactPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
-            {/* Warehouse */}
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
@@ -169,8 +200,6 @@ const ContactPage = () => {
                 <p>Kashmere Gate 1/1 Nicholson Road, Kashmere Gate, North Delhi, Delhi – 110006</p>
               </div>
             </div>
-
-            {/* Head Office */}
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
@@ -178,8 +207,6 @@ const ContactPage = () => {
                 <p>5-G, 5th Floor, Vandana Building, 11 Tolstoy Marg, Connaught Place, New Delhi 110001</p>
               </div>
             </div>
-
-            {/* Equipment Depot */}
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
@@ -187,8 +214,6 @@ const ContactPage = () => {
                 <p>Village Ganauli, beside Pratap Hotel, Dabok, Udaipur, Rajasthan – 313001</p>
               </div>
             </div>
-
-            {/* Service Center */}
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
@@ -196,8 +221,6 @@ const ContactPage = () => {
                 <p>Plot No.-13, Sector-59, HUDA Ballabgarh, Faridabad, Haryana 121004</p>
               </div>
             </div>
-
-            {/* Regional Office */}
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
@@ -209,7 +232,6 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
