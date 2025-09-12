@@ -86,7 +86,7 @@ Message: ${form.message}`
                     <Linkedin size={20} />
                   </a>
                   <a
-                    href="https://youtube.com"
+                    href="https://www.instagram.com/setliteengineersltd/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-yellow-400 transition"
@@ -94,7 +94,7 @@ Message: ${form.message}`
                     <Instagram size={20} />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href=""
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-yellow-400 transition"
