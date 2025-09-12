@@ -71,10 +71,11 @@ export default function EngineAndTransmissionSections() {
               {engineData.description}
             </p>
 
-          <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
+          <div className="flex flex-col md:flex-row items-center
+           gap-6 mb-8">
   {/* Left-side Carousel */}
   <div className="flex-1 flex flex-col items-center">
-    <div className="w-[400px] h-[400px] relative mb-4">
+    <div className="w-[300px] md:w-[400px] h-[400px] relative mb-4">
       <Image
         src={images[carouselIndex]}
         alt={`Engine Image ${carouselIndex + 1}`}
@@ -135,10 +136,10 @@ export default function EngineAndTransmissionSections() {
               {engineData.transmission.description}
             </p>
 
-          <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
+          <div className="flex flex-col md:flex-row  gap-6 mb-8 items-center ">
   {/* Left-side Carousel */}
   <div className="flex-1 flex flex-col items-center">
-    <div className="w-[400px] h-[400px] relative mb-4">
+    <div className="w-[300px] md:w-[400px] h-[400px] relative mb-4">
       <Image
         src={images[carouselIndex]}
         alt={`Engine Image ${carouselIndex + 1}`}

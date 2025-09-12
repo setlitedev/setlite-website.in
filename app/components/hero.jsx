@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, Shield } from "lucide-react";
+import Link from "next/link";
 
 
 const Hero = () => {
@@ -69,13 +70,17 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in [animation-delay:0.4s]">
+            <Link href="/services">
             <button className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-medium py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center group">
               EXPLORE OUR SERVICES
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </button>
+            </Link>
+            <Link href="/contact">
             <button className="border-2 border-yellow-400 hover:border-yellow-300 text-yellow-400 hover:text-yellow-300 font-medium py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center group">
               CONTACT US
             </button>
+            </Link>
           </div>
 
           {/* Quick Stats */}

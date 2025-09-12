@@ -6,6 +6,7 @@ import Clients from "./components/client";
 import Footer from "./components/footer";
 import Categories from "./products/components/categories";
 import ServiceCategories from "./services/components/servicecategory";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,12 +23,16 @@ export default function Home() {
       We support hundreds of additional models across all major OEMs. Contact our technical team for specific model support and parts availability.
     </p>
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Link href="/contact">
       <button className="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg hover:bg-yellow-600 transition">
         Contact Technical Team
       </button>
+      </Link>
+      <Link href="/products">
       <button className="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-lg hover:bg-gray-800 hover:text-yellow-400 transition">
         Browse All Equipment
       </button>
+      </Link>
     </div>
   </div>
 </div>

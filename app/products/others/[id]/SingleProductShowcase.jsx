@@ -371,9 +371,7 @@ const generateSlides = (category) => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center"
         >
-          <div className="flex flex-wrap justify-center gap-8">
-            <Clients />
-          </div>
+        
         </motion.div>
       </section>
 

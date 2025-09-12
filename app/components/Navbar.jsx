@@ -49,7 +49,6 @@ const Navbar = () => {
   ];
 
   if (!mounted) {
-    // Prevents hydration mismatches by rendering a static header first
     return (
       <header className="fixed top-0 left-0 right-0 z-50 bg-transparent py-4">
         <div className="container mx-auto px-4 flex items-center justify-between">
@@ -102,6 +101,7 @@ const Navbar = () => {
                     priority
                   />
                 </div>
+                {/* Always show company name on mobile */}
                 <div className="hidden sm:block">
                   <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
                     <span className="text-[#FBC400]">S</span>
@@ -175,14 +175,22 @@ const Navbar = () => {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="lg:hidden p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FBC400]/50"
+              className={`lg:hidden p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FBC400]/50`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <X className="h-6 w-6 text-gray-800 dark:text-white" />
+                <X
+                  className={`h-6 w-6 ${
+                    isScrolled ? "text-white" : "text-white dark:text-white"
+                  }`}
+                />
               ) : (
-                <Menu className="h-6 w-6 text-gray-800 dark:text-white" />
+                <Menu
+                  className={`h-6 w-6 ${
+                    isScrolled ? "text-white" : "text-white dark:text-white"
+                  }`}
+                />
               )}
             </button>
           </div>
@@ -201,12 +209,7 @@ const Navbar = () => {
               {/* Mobile Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
                 <Link href="/" className="flex items-center space-x-3">
-                  <Image
-                    src="/logo.png"
-                    alt="SEL Logo"
-                    width={40}
-                    height={40}
-                  />
+                  <Image src="/logo.png" alt="SEL Logo" width={40} height={40} />
                   <h2 className="text-lg font-bold text-gray-900 dark:text-white">
                     <span className="text-[#FBC400]">S</span>
                     <span className="text-white dark:text-gray-100">ETLITE </span>
@@ -220,7 +223,7 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 >
-                  <X className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+                  <X className="h-6 w-6 text-white dark:text-gray-300" />
                 </button>
               </div>
 
