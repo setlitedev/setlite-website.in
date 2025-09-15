@@ -197,7 +197,7 @@ Message: ${form.message}`
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
                 <h3 className="font-bold text-white">Warehouse</h3>
-                <p>Kashmere Gate 1/1 Nicholson Road, Kashmere Gate, North Delhi, Delhi – 110006</p>
+                <p> 1/1 Nicholson Road, Kashmere Gate, North Delhi, Delhi – 110006</p>
               </div>
             </div>
             <div className="flex items-start gap-4 text-gray-300">
