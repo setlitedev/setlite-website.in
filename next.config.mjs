@@ -10,11 +10,11 @@ const nextConfig = {
             value: 'setlite.in', // when someone visits setlite.in
           },
         ],
-        destination: 'https://www.setlite.in/:path*', // redirect to www.setlite.in
+        destination: 'https://setlite.com/:path*', // send them to setlite.com
         permanent: true, // 308 Permanent Redirect
       },
     ];
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
