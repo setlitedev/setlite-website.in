@@ -11,7 +11,7 @@ const Servicehero = () => {
       {/* Container */}
       <div className="relative w-[85vw] md:w-[75vw] lg:w-[70vw] mx-auto flex flex-col text-left z-10 px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[70px] font-bold mb-6 leading-tight uppercase">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl  font-bold mb-6 leading-tight uppercase">
           <span className="block text-white">Maximise Equipment Uptime With
 </span>
      

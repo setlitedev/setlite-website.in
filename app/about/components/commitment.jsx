@@ -32,14 +32,14 @@ export default function Commitment() {
         <div className="flex flex-col justify-center space-y-8">
           {/* Header */}
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
               Commitment to <span className="text-yellow-400">Excellence</span>
             </h2>
             <div className="mt-3 w-16 h-1 bg-yellow-400 rounded-full"></div>
           </div>
 
           {/* Top Paragraph */}
-          <div className="text-lg md:text-xl leading-relaxed text-gray-300 space-y-5">
+          <div className="text-lg md:text-lg leading-relaxed text-gray-300 space-y-5">
             <p>
               What truly sets{" "}
               <span className="text-white font-semibold">

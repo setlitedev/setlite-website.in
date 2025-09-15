@@ -36,11 +36,11 @@ const PrimeMovers = () => {
           <div key={index} className="flex flex-col gap-8">
             {/* Text Content */}
             <div className="text-center">
-              <h2 className="text-2xl md:text-5xl font-bold tracking-widest mb-10 mt-10">
+              <h2 className="text-2xl md:text-4xl font-bold tracking-widest mb-10 mt-10">
                 <span className="text-white">YOUR PRIME </span>
                 <span className="text-yellow-500">MOVERS</span>
               </h2>
-              <div className="space-y-4 text-gray-300  text-center text-xl leading-relaxed">
+              <div className="space-y-4 text-gray-300  text-center text-lg leading-relaxed">
                 {item.description.map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}

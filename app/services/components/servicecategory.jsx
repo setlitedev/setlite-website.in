@@ -37,10 +37,10 @@ export default function ServiceCategories() {
 
       {/* Header */}
       <div className="relative text-center mb-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-wider text-white">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-wider text-white">
           OUR <span className="text-yellow-400">SERVICES</span>
         </h2>
-        <p className="text-gray-300 mt-4 text-lg md:text-xl leading-relaxed">
+        <p className="text-gray-300 mt-4 text-lg md:text-lg leading-relaxed">
           Tailored solutions to maximize{" "}
           <span className="text-yellow-400 font-semibold">uptime</span>, enhance{" "}
           <span className="text-yellow-400 font-semibold">efficiency</span>, and

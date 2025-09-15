@@ -71,10 +71,10 @@ const Timeline = () => {
     <section className="relative bg-gradient-to-r from-gray-900 via-black to-gray-950 text-white py-20">
       {/* Section Header */}
       <div className="text-center mb-20 px-4">
-        <h2 className="text-4xl md:text-5xl font-extrabold tracking-wide">
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-wide">
           OUR <span className="text-yellow-400">JOURNEY</span>
         </h2>
-        <p className="text-gray-400 mt-3 text-base md:text-lg">
+        <p className="text-gray-400 mt-3 text-base md:text-md">
           A timeline of growth, partnerships, and innovation
         </p>
       </div>

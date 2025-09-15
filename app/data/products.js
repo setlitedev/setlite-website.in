@@ -50,7 +50,7 @@ export const products = {engine: {
     image: "/pp2.png",
     heroImage:"/underpro.png",mainhead:"Leading Brands We Stock",
     para:"Our comprehensive range of undercarriage components is engineered for durability, precision, and smooth operation. Using high-grade wear-resistant steel and advanced surface treatments, each part is designed to minimize downtime, extend operational life, and fit seamlessly with your equipment. From standard machinery to specialized applications, we also offer customized undercarriage solutions tailored to your needs.",
-     description: ".",
+     description: "Durable components that provide stability, traction, and superior ground contact, ensuring maximum productivity and reduced wear in tough operations.",
     types: [
       {
         name: "CF Undercarriage Parts",

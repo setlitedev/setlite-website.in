@@ -61,7 +61,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Headline */}
           <div className="space-y-4 animate-fade-in mt-10">
-            <h1 className="text-5xl md:text-6xl font-bold font-rajdhani leading-tight tracking-wide text-white">
+            <h1 className="text-3xl md:text-5xl font-bold font-rajdhani leading-tight tracking-wide text-white">
               POWERING HEAVY-DUTY
               <span className="block text-yellow-400">UPTIME</span>
             </h1>

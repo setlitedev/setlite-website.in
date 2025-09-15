@@ -69,11 +69,11 @@ export default function OurExpertise() {
     <section className="bg-black text-white font-sans py-20 px-6 md:px-16">
       {/* Section Header */}
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           <span className="text-white">OUR</span>{" "}
           <span className="text-yellow-400">EXPERTISE</span>
         </h2>
-        <p className="text-gray-400 text-lg">
+        <p className="text-gray-400 text-md">
           Engineering excellence paired with precision visuals—for clarity, trust, and impact.
         </p>
       </div>

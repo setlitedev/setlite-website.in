@@ -44,7 +44,7 @@ Message: ${form.message}`
         ></video>
         <div className="absolute inset-0 bg-black/80 pointer-events-none"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">
             Connect With the <span className="text-yellow-400">Power of</span>
             <br />
             <span className="text-yellow-400">Reliability</span>
@@ -185,7 +185,7 @@ Message: ${form.message}`
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center items-center mb-16">
             <div className="w-full max-w-4xl relative">
-              <h2 className="text-5xl font-bold text-center text-white">
+              <h2 className="text-4xl font-bold text-center text-white">
                 Our <span className="text-yellow-400">Locations</span>
               </h2>
               <div className="absolute left-0 right-0 bottom-[-30] h-1 bg-yellow-400 "></div>
@@ -193,18 +193,25 @@ Message: ${form.message}`
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
-            <div className="flex items-start gap-4 text-gray-300">
-              <MapPin size={24} className="mt-1 text-yellow-400" />
-              <div>
-                <h3 className="font-bold text-white">Warehouse</h3>
-                <p> 1/1 Nicholson Road, Kashmere Gate, North Delhi, Delhi – 110006</p>
-              </div>
-            </div>
+           
+           
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
                 <h3 className="font-bold text-white">Head Office (Operational)</h3>
                 <p>5-G, 5th Floor, Vandana Building, 11 Tolstoy Marg, Connaught Place, New Delhi 110001</p>
+              </div>
+            </div> <div className="flex items-start gap-4 text-gray-300">
+              <MapPin size={24} className="mt-1 text-yellow-400" />
+              <div>
+                <h3 className="font-bold text-white">New Warehouse</h3>
+                <p>SETLITE ENGINEERS LIMITED REVENUE ESTATE, GT ROAD, AAMRU, Palwal, Palwal, Haryana, 121102</p>
+              </div>
+            </div> <div className="flex items-start gap-4 text-gray-300">
+              <MapPin size={24} className="mt-1 text-yellow-400" />
+              <div>
+                <h3 className="font-bold text-white">Warehouse</h3>
+                <p> 1/1 Nicholson Road, Kashmere Gate, North Delhi, Delhi – 110006</p>
               </div>
             </div>
             <div className="flex items-start gap-4 text-gray-300">

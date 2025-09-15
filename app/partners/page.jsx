@@ -15,15 +15,15 @@ export default function PartnersPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-6xl font-extrabold tracking-tight"
+            className="text-4xl font-extrabold tracking-tight"
           >
-            Our <span className="text-yellow-400">Partners</span>
+            OUR <span className="text-yellow-400">PARTNERS</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-6 text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="mt-6 text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             We collaborate with world-leading companies to deliver innovative solutions in
             <span className="text-yellow-400"> heavy machinery, mining, construction, and powertrain industries</span>
@@ -171,11 +171,11 @@ export default function PartnersPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-5xl font-bold"
+          className="text-4xl font-bold"
         >
           Building <span className="text-yellow-400">Strong Partnerships</span>
         </motion.h2>
-        <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
           Our alliances with AVTEC, Kian Ann, and other global leaders enable us to deliver unmatched
           quality, reliability, and innovation across automotive, construction, mining, and heavy equipment
           industries in India and abroad.
@@ -183,7 +183,7 @@ export default function PartnersPage() {
       </section>
 {/* Disclaimer */}
       <div className="border-b border-gray-800 pt-4  px-4 pb-10">
-        <p className="text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
+        <p className="text-xs md:text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
           <strong>Disclaimer:</strong> All brand names and images used are
           solely for reference and illustration purposes. Setlite Engineers
           Limited does not imply any ownership or direct affiliation unless

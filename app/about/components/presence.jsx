@@ -51,10 +51,10 @@ export default function Presence() {
 
       {/* Section Header */}
       <div className="relative z-10 text-center py-16 max-w-4xl mx-auto px-6">
-        <h2 className="text-yellow-400 text-3xl md:text-5xl font-bold mb-4 uppercase">
+        <h2 className="text-yellow-400 text-3xl md:text-4xl font-bold mb-4 uppercase">
           <span className="text-white">Our Presence Across</span> Sectors
         </h2>
-        <p className="text-gray-300 leading-relaxed text-lg">
+        <p className="text-gray-400 leading-relaxed text-md">
           With decades of experience, Setlite Engineers Limited has built a
           strong presence across multiple sectors that form the backbone of
           India's growth. Our product range and services are trusted in

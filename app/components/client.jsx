@@ -47,8 +47,8 @@ const Clients = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">OUR <span className="text-yellow-400"> CLIENTS</span> </h2>
-          <p className="text-xl text-white max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">OUR <span className="text-yellow-400"> CLIENTS</span> </h2>
+          <p className="text-lg text-white max-w-3xl mx-auto">
             Proudly serving leading companies across mining, construction, and infrastructure.
           </p>
         </div>

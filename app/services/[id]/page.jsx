@@ -17,7 +17,7 @@ const ServiceHero = ({ heroImage, title1, title2, description }) => {
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
       <div className="relative w-[85vw] md:w-[75vw] lg:w-[70vw] mx-auto flex flex-col text-left z-10 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[70px] font-bold mb-6 leading-tight uppercase">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight uppercase">
           <span className="block text-white">{title1}</span>
           <span className="block text-yellow-400">{title2}</span>
         </h1>
@@ -36,10 +36,10 @@ const ServiceIntro = ({ mainTitle, introDescription }) => {
   return (
     <section className=" pb-2 pt-10">
       <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4">
+        <h1 className="text-4xl sm:text-4xl font-bold text-yellow-400 mb-4">
           {mainTitle}
         </h1>
-        <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+        <p className="text-lg sm:text-md text-gray-300 leading-relaxed">
           {introDescription}
         </p>
       </div>
@@ -167,7 +167,7 @@ export default function ServiceDetailPage({ params }) {
       <WhyPartner/>
       {/* Disclaimer */}
       <div className="border-b border-gray-800 pt-4  px-4 pb-10">
-        <p className="text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
+        <p className="text-xs md:text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
           <strong>Disclaimer:</strong> All brand names and images used are
           solely for reference and illustration purposes. Setlite Engineers
           Limited does not imply any ownership or direct affiliation unless

@@ -38,7 +38,7 @@ export default function Home() {
 </div>
  {/* Disclaimer */}
       <div className="border-b border-black   px-4 pb-10">
-        <p className="text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
+        <p className="text-xs md:text-sm text-gray-400 text-center max-w-5xl mx-auto leading-relaxed">
           <strong>Disclaimer:</strong> All brand names and images used are
           solely for reference and illustration purposes. Setlite Engineers
           Limited does not imply any ownership or direct affiliation unless

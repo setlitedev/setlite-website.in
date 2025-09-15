@@ -68,7 +68,7 @@ const generateSlides = (category) => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
 
         <div className="relative w-[85vw] md:w-[75vw] lg:w-[70vw] mx-auto flex flex-col text-left z-10 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[70px] font-bold mb-6 leading-tight uppercase">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl  font-bold mb-6 leading-tight uppercase">
             <span className="block text-white">{category.title1 || "Powering the"}</span>
             <span className="block text-white">{category.title2 || "Future of"}</span>
             <span className="block text-yellow-500">{category.title || "Heavy Machinery"}</span>
@@ -91,11 +91,11 @@ const generateSlides = (category) => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+          <h2 className="text-4xl md:text-4xl font-bold text-yellow-400 mb-4">
             {category.title}
           </h2>
           {category.description && (
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+            <p className="text-gray-300 text-lg md:text-lg leading-relaxed">
               {category.description}
             </p>
           )}
@@ -240,7 +240,7 @@ const generateSlides = (category) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6"
+                className="text-4xl md:text-4xl font-bold text-yellow-400 mb-6"
               >
                 Ground Engaging Tools (GET)
               </motion.h2>
@@ -303,7 +303,7 @@ const generateSlides = (category) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6"
+                className="text-4xl md:text-4xl font-bold text-yellow-400 mb-6"
               >
                 Spare Parts: Global Sourcing Solutions
               </motion.h2>

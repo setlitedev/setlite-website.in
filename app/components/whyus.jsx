@@ -27,7 +27,7 @@ export default function WhyPartner() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
         {/* Left Section */}
         <div className="md:w-1/2">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
             Why Partner with{" "}
             <span className="text-yellow-400">Setlite Engineers Ltd.</span>?
           </h2>
