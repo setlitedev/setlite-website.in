@@ -7,10 +7,10 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'setlite.in', // when someone visits setlite.in
+            value: 'setlite.com', // when someone visits setlite.com
           },
         ],
-        destination: 'https://setlite.com/:path*', // send them to setlite.com
+        destination: 'https://setlite.in/:path*', // send them to setlite.in
         permanent: true, // 308 Permanent Redirect
       },
     ];
