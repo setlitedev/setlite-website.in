@@ -63,7 +63,7 @@ const Navbar = () => {
                   priority
                 />
               </div>
-              <h1 className="hidden sm:block text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+              <h1 className="hidden sm:block text-sm sm:text-base font-semibold text-gray-900 dark:text-white">
                 <span className="text-[#FBC400]">S</span>
                 <span className="text-white dark:text-gray-100">ETLITE </span>
                 <span className="text-[#FBC400]">E</span>
@@ -81,10 +81,10 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-8 pb-8 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-6 pb-6 ${
           isScrolled
             ? "bg-black dark:bg-black backdrop-blur-lg border-b border-gray-200 dark:border-gray-700 shadow-md py-2"
-            : "bg-transparent py-4"
+            : "bg-transparent py-3"
         }`}
       >
         <div className="container mx-auto px-4">
@@ -101,9 +101,9 @@ const Navbar = () => {
                     priority
                   />
                 </div>
-                {/* Always show company name on mobile */}
+                {/* Company Name */}
                 <div className="hidden sm:block">
-                  <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+                  <h1 className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">
                     <span className="text-[#FBC400]">S</span>
                     <span className="text-white dark:text-gray-100">ETLITE </span>
                     <span className="text-[#FBC400]">E</span>
@@ -118,12 +118,12 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="flex items-center space-x-2 text-base font-medium text-white dark:text-gray-200 hover:text-[#FBC400] transition-all duration-200 group"
+                  className="flex items-center space-x-2 text-sm font-medium text-white dark:text-gray-200 hover:text-[#FBC400] transition-all duration-200 group"
                 >
                   <item.icon className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                   <span>{item.label}</span>
@@ -131,18 +131,18 @@ const Navbar = () => {
               ))}
 
               {/* More Dropdown */}
-              <div className="relative ml-3 group">
-                <button className="flex items-center space-x-1 text-base font-medium text-white dark:text-gray-200 hover:text-[#FBC400] transition-all duration-200">
+              <div className="relative ml-2 group">
+                <button className="flex items-center space-x-1 text-sm font-medium text-white dark:text-gray-200 hover:text-[#FBC400] transition-all duration-200">
                   <span>More</span>
-                  <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+                  <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
-                <div className="absolute left-0 mt-3 w-40 bg-black dark:bg-gray-900 shadow-lg rounded-xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-out invisible group-hover:visible">
+                <div className="absolute left-0 mt-3 w-36 bg-black dark:bg-gray-900 shadow-lg rounded-xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-out invisible group-hover:visible">
                   <ul className="py-2">
                     {moreItems.map((sub) => (
                       <li key={sub.label}>
                         <Link
                           href={sub.href}
-                          className="block px-4 py-2 text-white dark:text-gray-200 hover:text-yellow-400 dark:hover:bg-gray-800 rounded-md transition-all duration-200"
+                          className="block px-4 py-2 text-xs text-white dark:text-gray-200 hover:text-yellow-400 dark:hover:bg-gray-800 rounded-md transition-all duration-200"
                         >
                           {sub.label}
                         </Link>
@@ -154,10 +154,10 @@ const Navbar = () => {
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center space-x-3">
+            <div className="hidden lg:flex items-center space-x-2">
               <a
                 href="tel:+911123311111,23321111,23721111"
-                className="flex items-center space-x-2 px-4 py-2 bg-[#FBC400] text-black rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm font-medium"
+                className="flex items-center space-x-2 px-3 py-2 bg-[#FBC400] text-black rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200 text-xs font-medium"
               >
                 <Phone className="h-4 w-4" />
                 <span>Call Us</span>
@@ -166,7 +166,7 @@ const Navbar = () => {
                 href="https://wa.me/919716001002"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm font-medium"
+                className="flex items-center space-x-2 px-3 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 hover:shadow-lg hover:scale-105 transition-all duration-200 text-xs font-medium"
               >
                 <MessageCircle className="h-4 w-4" />
                 <span>WhatsApp</span>
@@ -175,7 +175,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Toggle */}
             <button
-              className={`lg:hidden p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FBC400]/50`}
+              className={`lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FBC400]/50`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -209,8 +209,8 @@ const Navbar = () => {
               {/* Mobile Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
                 <Link href="/" className="flex items-center space-x-3">
-                  <Image src="/logo.png" alt="SEL Logo" width={40} height={40} />
-                  <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+                  <Image src="/logo.png" alt="SEL Logo" width={36} height={36} />
+                  <h2 className="text-sm font-semibold text-gray-900 dark:text-white">
                     <span className="text-[#FBC400]">S</span>
                     <span className="text-white dark:text-gray-100">ETLITE </span>
                     <span className="text-[#FBC400]">E</span>
@@ -234,11 +234,11 @@ const Navbar = () => {
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="flex items-center space-x-3 w-full p-4 rounded-xl text-white dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200 group"
+                      className="flex items-center space-x-3 w-full p-3 rounded-lg text-sm text-white dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200 group"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <item.icon className="h-5 w-5 text-[#FBC400] group-hover:scale-110 transition-transform duration-200" />
-                      <span className="text-base font-medium">{item.label}</span>
+                      <span className="text-sm font-medium">{item.label}</span>
                     </Link>
                   ))}
 
@@ -246,9 +246,9 @@ const Navbar = () => {
                   <div className="border-t border-gray-700 pt-4">
                     <button
                       onClick={() => setIsMoreOpen(!isMoreOpen)}
-                      className="flex items-center justify-between w-full p-4 rounded-xl text-white dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200"
+                      className="flex items-center justify-between w-full p-3 rounded-lg text-sm text-white dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200"
                     >
-                      <span className="text-base font-medium">More</span>
+                      <span className="text-sm font-medium">More</span>
                       {isMoreOpen ? (
                         <ChevronUp className="h-5 w-5 text-[#FBC400]" />
                       ) : (
@@ -256,12 +256,12 @@ const Navbar = () => {
                       )}
                     </button>
                     {isMoreOpen && (
-                      <div className="ml-4 mt-2 space-y-2">
+                      <div className="ml-3 mt-2 space-y-2">
                         {moreItems.map((sub) => (
                           <Link
                             key={sub.label}
                             href={sub.href}
-                            className="block p-3 rounded-lg text-sm text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200"
+                            className="block p-2 rounded-lg text-xs text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/70 transition-all duration-200"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             {sub.label}
@@ -273,11 +273,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Actions */}
-                <div className="pt-8 space-y-4">
+                <div className="pt-6 space-y-3">
                   <div className="grid grid-cols-1 gap-3">
                     <a
                       href="tel:+911123311111"
-                      className="flex items-center justify-center space-x-3 p-4 bg-[#FBC400] text-black rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 font-medium"
+                      className="flex items-center justify-center space-x-2 p-3 bg-[#FBC400] text-black rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm font-medium"
                     >
                       <Phone className="h-5 w-5" />
                       <span>Call Now</span>
@@ -287,7 +287,7 @@ const Navbar = () => {
                       href="https://wa.me/919716001002"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center space-x-3 p-4 bg-green-500 text-white rounded-xl hover:bg-green-600 hover:shadow-lg hover:scale-105 transition-all duration-200 font-medium"
+                      className="flex items-center justify-center space-x-2 p-3 bg-green-500 text-white rounded-lg hover:bg-green-600 hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm font-medium"
                     >
                       <MessageCircle className="h-5 w-5" />
                       <span>WhatsApp</span>
@@ -297,8 +297,8 @@ const Navbar = () => {
               </nav>
 
               {/* Mobile Footer */}
-              <div className="p-6 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+              <div className="p-5 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+                <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
                   Contact us for all your engineering solutions
                 </p>
               </div>

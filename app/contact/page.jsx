@@ -34,17 +34,29 @@ Message: ${form.message}`
     <div className="text-white min-h-screen font-sans bg-gradient-to-r from-gray-900 via-black to-gray-950">
       {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover will-change-transform"
-          src="/contvideo.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        ></video>
+       <video
+  className="absolute inset-0 w-full h-full object-cover will-change-transform"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  poster="https://ik.imagekit.io/l76jfketc/video/contposter.png?tr=w-1920,q-40"
+  crossOrigin="anonymous"
+>
+  <source
+    src="https://ik.imagekit.io/l76jfketc/video/contvideo%20(1)%20(1)%20(1).webm?tr=w-1920,q-40,f-auto"
+    type="video/webm"
+  />
+  <source
+    src="https://ik.imagekit.io/l76jfketc/video/contvideo%20(1)%20(1)%20(1).mp4?tr=w-1920,q-40,f-auto"
+    type="video/mp4"
+  />
+</video>
+
         <div className="absolute inset-0 bg-black/80 pointer-events-none"></div>
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">
+          <h1 className="text-3xl md:text-4xl font-extrabold leading-relaxed text-white">
             Connect With the <span className="text-yellow-400">Power of</span>
             <br />
             <span className="text-yellow-400">Reliability</span>
@@ -57,7 +69,7 @@ Message: ${form.message}`
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold">Get in Touch</h2>
+            <h2 className="text-2xl font-bold">Get in Touch</h2>
             <div className="flex items-center gap-4 text-gray-300">
               <Phone size={24} />
               <div>
@@ -204,8 +216,9 @@ Message: ${form.message}`
             </div> <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
-                <h3 className="font-bold text-white">New Warehouse</h3>
-                <p>SETLITE ENGINEERS LIMITED REVENUE ESTATE, GT ROAD, AAMRU, Palwal, Palwal, Haryana, 121102</p>
+             <h3 className="font-bold text-white">Service Center {"(Unit-1)"}</h3>
+
+                <p>SETLITE ENGINEERS LIMITED , REVENUE ESTATE, GT ROAD, AAMRU, Palwal, Palwal, Haryana, 121102</p>
               </div>
             </div> <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
@@ -224,7 +237,7 @@ Message: ${form.message}`
             <div className="flex items-start gap-4 text-gray-300">
               <MapPin size={24} className="mt-1 text-yellow-400" />
               <div>
-                <h3 className="font-bold text-white">Service Center</h3>
+                <h3 className="font-bold text-white">Service Center {"(Unit-2)"}</h3>
                 <p>Plot No.-13, Sector-59, HUDA Ballabgarh, Faridabad, Haryana 121004</p>
               </div>
             </div>

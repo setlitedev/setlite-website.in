@@ -7,9 +7,9 @@ export const engineData = {
   title2: "Future of Heavy Machinery",
   image: "/ex3.png",
   heroImage: "/eng1.png",
-  heroImage1: "/engi.png",
+  heroImage1: "/en.png",
   heroImage2:   "/eng1.png",
-  heroImage3: "/engi.png",
+  heroImage3: "/en.png",
 
   description:
     "At Setlite Engineers Limited, we specialize in the overhaul and repair of a wide variety of non-franchised industrial engine models, ensuring your heavy equipment operates at peak performance and reliability.",
@@ -18,7 +18,7 @@ export const engineData = {
     {
       name: "Komatsu Engine Overhaul",
       description:
-        "Expertise in Komatsu engine series such as SAA6D140, SAA6D170, SAA6114, SAA6D125, SAA6D155, SAA12V140E, SAA12V170E, and more. Full-service overhaul with factory-trained engineers and advanced tooling.",
+        "Expertise in Komatsu engine series such as S AA6D140, S AA6D170, S AA6114, SAA6D125, SAA6D155, SAA12V140E, SAA12V170E, and more. Full-service overhaul with factory-trained engineers and advanced tooling.",
     },
     {
       name: "Cummins Engine Overhaul",
@@ -90,9 +90,9 @@ export const engineData = {
 transmission: {
   description: `Setlite Engineers Limited offers comprehensive transmission overhaul and repair services for a wide range of heavy equipment, including dumpers, dozers, loaders, railway OHE vehicles, and tower wagons. `,
   heroImage: "/transs.png",
-  heroImage1: "/transs.png",
+  heroImage1: "/tran2.png",
   heroImage2: "/transs.png",
-  heroImage3: "/transs.png",
+  heroImage3: "/tran2.png",
   types: [
     {
       name: "Contemporary Models",
@@ -102,7 +102,7 @@ transmission: {
     {
       name: "Legacy Models",
       description:
-        "Expertise in supporting older transmissions such as SCLT754, SCLBT754, and SM6610.",
+        "Supporting older transmissions such as S CLT754, S CLBT754, and S M6610.",
     },
     {
       name: "BEML Recon Transmissions",
@@ -122,7 +122,7 @@ transmission: {
     {
       name: "Transmission Overhaul",
       description:
-        `With decades of experience, Setlite Engineers Limited ensures reliable and long-lasting transmission performance. We service both modern models (TT/TRT 2000 series, CRT 5633, CT 100) and legacy units (SCLT754, SCLBT754, SM6610).
+        `With decades of experience, Setlite Engineers Limited ensures reliable and long-lasting transmission performance. We service both modern models (TT/TRT 2000 series, CRT 5633, CT 100) and have expertise in legacy units (S CLT754, S CLBT754, S M6610).
 
 Beyond AVTEC, we provide recon solutions for non-franchise BEML and Komatsu equipment. For BEML (e.g., BH-100 dumpers, dozers, graders), we offer outright sales or recon-exchange programs to minimize downtime. Komatsu transmissions are rebuilt to OEM standards, delivering like-new performance.
 

@@ -129,7 +129,7 @@ const StatsSection = () => {
     }, [isVisible, end, duration]);
 
     return (
-      <span className="font-bold text-4xl md:text-5xl text-yellow-500">
+      <span className="font-bold text-3xl md:text-[32px] text-yellow-500">
         {count.toLocaleString()}
         {suffix}
       </span>
@@ -158,10 +158,10 @@ const StatsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-[32px] font-bold mb-1">
             WHY <span className="text-yellow-400">SEL</span>
           </h2>
-          <p className="text-lg text-white max-w-2xl mx-auto">
+          <p className="text-lg md:text-[16px] text-gray-400 max-w-2xl mx-auto">
             Over Three decades of engineering excellence delivering reliable
             solutions worldwide
           </p>
@@ -169,20 +169,26 @@ const StatsSection = () => {
 
         {/* Stats Grid */}
         <div className="flex flex-wrap justify-center gap-8 mb-20">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center bg-[#272B30] py-6 rounded-xl shadow-md w-80 border-amber-50 border-2"
-            >
-              <CountUpNumber end={stat.number} suffix={stat.suffix} />
-              <h3 className="text-lg font-semibold mt-2">{stat.label}</h3>
-              <p className="text-sm text-gray-400">{stat.description}</p>
-            </div>
-          ))}
+    {stats.map((stat, index) => (
+  <div
+    key={index}
+    className="text-center bg-[#272B30] py-4 rounded-xl shadow-md w-72 border-amber-50 border-2"
+  >
+    <div className="text-[12px] font-bold">
+      <CountUpNumber end={stat.number} suffix={stat.suffix} />
+    </div>
+    <h3 className="text-lg md:text-[16px] font-semibold mt-2">
+      {stat.label}
+    </h3>
+    <p className="text-sm md:text-[12px] text-gray-400">
+      {stat.description}
+    </p>
+  </div>
+))}
         </div>
 
         {/* Global Sourcing Network */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 max-w-6xl mx-auto px-4">
           <h3 className="text-2xl font-bold mb-6">GLOBAL SOURCING NETWORK</h3>
 
           <div className="p-4">
@@ -220,7 +226,7 @@ const StatsSection = () => {
             <ReactTooltip id="map-tooltip" />
           </div>
 
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-[16px]">
             Our global export network delivers top-grade machinery parts across
             continents, supporting industries with speed and reliability.
           </p>
@@ -233,10 +239,10 @@ const StatsSection = () => {
             return (
               <div
                 key={index}
-                className="bg-[#1A1E23] rounded-xl shadow-md p-6 text-center hover:shadow-[0_0_20px_rgba(255,214,0,0.5)] transition-shadow"
+                className="bg-[#1A1E23] rounded-xl shadow-md p-4 text-center hover:shadow-[0_0_20px_rgba(255,214,0,0.5)] transition-shadow"
               >
-                <div className="flex items-center justify-center w-12 h-12 mx-auto rounded-lg bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors">
-                  <Icon className="w-6 h-6 text-yellow-500" />
+                <div className="flex items-center justify-center w-8 h-8 mx-auto rounded-lg bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors">
+                  <Icon className="w-4 h-4 text-yellow-500" />
                 </div>
                 <span className="inline-block mt-4 px-3 py-1 text-xs font-medium text-yellow-500 bg-yellow-500/10 rounded-full">
                   {badge.title}

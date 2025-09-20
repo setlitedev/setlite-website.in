@@ -17,7 +17,7 @@ const expertise = [
       "Rigorous test bench evaluations before delivery.",
     ],
     icon: <Cpu className="w-8 h-8 text-yellow-400" />,
-    imageSrc: "/ex1.png", // replace with real file paths
+    imageSrc: "/koma.png", // replace with real file paths
     imageAlt: "Excavator at site",
   },
   {
@@ -28,7 +28,7 @@ const expertise = [
       "Maintains OEM-grade reliability and performance.",
     ],
     icon: <RefreshCcw className="w-8 h-8 text-yellow-400" />,
-    imageSrc: "/ex2.png",
+    imageSrc: "/rec.png",
     imageAlt: "Heavy equipment stacked",
   },
   {
@@ -38,7 +38,7 @@ const expertise = [
       "Advanced powertrain and engineered solutions.",
     ],
     icon: <Settings className="w-8 h-8 text-yellow-400" />,
-    imageSrc: "/power.png",
+    imageSrc: "/powe.png",
     imageAlt: "Industrial equipment setup",
   },
   {
@@ -48,7 +48,7 @@ const expertise = [
       "OEM performance without premium cost.",
     ],
     icon: <Package className="w-8 h-8 text-yellow-400" />,
-    imageSrc: "/ex4.png",
+    imageSrc: "/recond.png",
     imageAlt: "Close-up industrial parts",
   },
   {
@@ -69,7 +69,7 @@ export default function OurExpertise() {
     <section className="bg-black text-white font-sans py-20 px-6 md:px-16">
       {/* Section Header */}
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-3xl md:text-3xl font-bold mb-4">
           <span className="text-white">OUR</span>{" "}
           <span className="text-yellow-400">EXPERTISE</span>
         </h2>
@@ -79,10 +79,10 @@ export default function OurExpertise() {
       </div>
 
       {/* Expertise Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {expertise.map((item, idx) => (
-          <div key={idx} className="bg-[#1a1d21]/70 rounded-xl overflow-hidden">
-            <div className="relative h-96">
+          <div key={idx} className="bg-[#1a1d21]/70 rounded-xl overflow-hidden md:w-[400px] mx-auto shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="relative h-60 ">
               <Image
                 src={item.imageSrc}
                 alt={item.imageAlt}
@@ -91,9 +91,9 @@ export default function OurExpertise() {
               />
             </div>
             <div className="p-6 space-y-4">
-              <div className="flex items-center space-x-3">
-                {item.icon}
-                <h3 className="text-2xl font-semibold">{item.title}</h3>
+              <div className="flex items-center space-x-3 ">
+               <span className="">{item.icon}</span>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
               </div>
               <ul className="text-gray-300 space-y-1">
                 {item.description.map((desc, i) => (

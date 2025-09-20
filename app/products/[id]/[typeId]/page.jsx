@@ -25,14 +25,14 @@ export default async function TypePage({ params }) {
           specifically stated.
         </p>
       </div><div className=" h-auto flex flex-col items-center justify-center bg-[#09090A] px-4 pt-20 pb-20">
-      <h1 className="text-4xl md:text-4xl font-bold text-white mb-6 text-center tracking-tight">
+      <h1 className="text-3xl md:text-3xl font-bold text-white mb-6 text-center tracking-tight">
         Need Engine Solution?
       </h1>
-      <p className="text-xl md:text-xl text-neutral-300 mb-12 text-center max-w-xl">
+      <p className="text-md md:text-md text-neutral-300 mb-12 text-center max-w-xl">
         Call our experts for personalized solutions
       </p>
       <button
-        className="bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 font-semibold text-md px-10 py-4 rounded-lg shadow-lg transition-colors focus:outline-none focus:ring-4 focus:ring-yellow-300"
+        className="bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 font-semibold text-sm px-8 py-3 rounded-lg shadow-lg transition-colors focus:outline-none focus:ring-4 focus:ring-yellow-300"
         type="button"
       >
         CONTACT US

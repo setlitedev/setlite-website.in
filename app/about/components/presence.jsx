@@ -51,7 +51,7 @@ export default function Presence() {
 
       {/* Section Header */}
       <div className="relative z-10 text-center py-16 max-w-4xl mx-auto px-6">
-        <h2 className="text-yellow-400 text-3xl md:text-4xl font-bold mb-4 uppercase">
+        <h2 className="text-yellow-400 text-3xl md:text-3xl font-bold mb-4 uppercase">
           <span className="text-white">Our Presence Across</span> Sectors
         </h2>
         <p className="text-gray-400 leading-relaxed text-md">
@@ -64,7 +64,7 @@ export default function Presence() {
       </div>
 
       {/* Alternating Sectors */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-24 pb-20">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 space-y-24 pb-20">
         {sectors.map((sector, index) => {
           const isImageRight = index % 2 === 0; // First one on the right
           return (
@@ -74,15 +74,15 @@ export default function Presence() {
             >
               {/* Text */}
               <div className={`${isImageRight ? "md:order-1" : "md:order-2"} space-y-4`}>
-                <h3 className="text-white text-2xl md:text-3xl font-bold">
+                <h3 className="text-white text-2xl md:text-2xl font-bold">
                   {sector.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
+                <p className="text-gray-400 leading-relaxed text-md">
                   {sector.description}
                 </p>
                 <a
                   href="#"
-                  className="inline-block text-yellow-400 font-semibold hover:underline"
+                  className="inline-block text-yellow-400 text-md font-semibold hover:underline"
                 >
                   → LEARN MORE
                 </a>

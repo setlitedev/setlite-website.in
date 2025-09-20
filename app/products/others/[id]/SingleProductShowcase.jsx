@@ -62,20 +62,20 @@ const generateSlides = (category) => {
     <>
       {/* Hero Section */}
       <section
-        className="relative h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative h-[80vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url('${category.heroImage || "/producthero.png"}')` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
 
-        <div className="relative w-[85vw] md:w-[75vw] lg:w-[70vw] mx-auto flex flex-col text-left z-10 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl  font-bold mb-6 leading-tight uppercase">
+        <div className="relative w-[85vw] md:w-[75vw] lg:w-[70vw] mx-auto flex flex-col text-left z-10 px-4 sm:px-6 lg:px-8 mt-10">
+          <h1 className="text-3xl sm:text-4xl md:text-[36px]  font-bold mb-6 leading-relaxed uppercase">
             <span className="block text-white">{category.title1 || "Powering the"}</span>
             <span className="block text-white">{category.title2 || "Future of"}</span>
             <span className="block text-yellow-500">{category.title || "Heavy Machinery"}</span>
           </h1>
 
           <div className="max-w-3xl">
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-md text-gray-300 mb-8 leading-relaxed">
               {category.description ||
                 "Engines, Transmissions & Spares engineered for unmatched performance in mining, construction & earthmoving."}
             </p>
@@ -84,18 +84,18 @@ const generateSlides = (category) => {
       </section>
 
       {/* Title & Description Below Hero */}
-      <section className="bg-black text-white py-16 px-6 md:px-20">
+      <section className="bg-black text-white py-20 px-6 md:px-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-4xl font-bold text-yellow-400 mb-4">
+          <h2 className="text-3xl md:text-3xl font-bold text-yellow-400 mb-4">
             {category.title}
           </h2>
           {category.description && (
-            <p className="text-gray-300 text-lg md:text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg md:text-sm leading-relaxed">
               {category.description}
             </p>
           )}
@@ -103,9 +103,9 @@ const generateSlides = (category) => {
       </section>
 
       {/* Main Section */}
-    <section className="relative bg-black text-white w-full overflow-hidden px-6 md:px-20 pt-10 pb-20">
+    <section className="relative bg-black text-white w-full overflow-hidden px-6 md:px-20 pt-10 pb-20 ">
   <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-900 to-black opacity-95" />
-  <div className="relative z-10 max-w-7xl mx-auto">
+  <div className="relative z-10 max-w-6xl mx-auto">
     <div className="grid md:grid-cols-2 gap-16 items-start">
       {/* Left Side: Type Details + Para & MainHead */}
       <motion.div
@@ -119,7 +119,7 @@ const generateSlides = (category) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-gray-300 text-lg md:text-xl mb-2 leading-relaxed"
+            className="text-gray-300 text-md md:text-md mb-2 leading-relaxed"
           >
             {category.para}
           </motion.p>
@@ -130,7 +130,7 @@ const generateSlides = (category) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl md:text-3xl font-bold text-yellow-400 mb-10 mt-10"
+            className="text-xl md:text-xl font-bold text-yellow-400 mb-10 mt-10"
           >
             {category.mainhead}
           </motion.h2>
@@ -138,8 +138,8 @@ const generateSlides = (category) => {
 
         {category.types.map((type, idx) => (
           <div key={idx}>
-            <h3 className="text-2xl font-semibold text-white flex items-center gap-2">
-              <span className="w-6 h-6 text-yellow-400">{typeIcons[idx] || <Cpu />}</span>
+            <h3 className="text-lg font-semibold text-white flex items-center gap-5">
+              <span className="w-4 h-4 text-yellow-400">{typeIcons[idx] || <Cpu />}</span>
               {type.name}
             </h3>
             <p className="mt-3 text-gray-300 leading-relaxed">{type.description}</p>
@@ -147,7 +147,7 @@ const generateSlides = (category) => {
               <ul className="mt-2 text-gray-400 text-sm space-y-1">
                 {type.specs.map((spec, sIdx) => (
                   <li key={sIdx}>
-                    <span className="font-semibold text-yellow-400 text-xl">{spec.label}:</span>{" "}
+                    <span className="font-semibold text-yellow-400 text-md">{spec.label}:</span>{" "}
                     {spec.value}
                   </li>
                 ))}
@@ -218,7 +218,7 @@ const generateSlides = (category) => {
       {/* Ground Engaging Tools Section (only for undercarriage) */}
       {category.id === "undercarriage" && (
         <section className="bg-black text-white py-20 px-6 md:px-20">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             {/* Left Side: Image */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -240,16 +240,16 @@ const generateSlides = (category) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-4xl font-bold text-yellow-400 mb-6"
+                className="text-4xl md:text-2xl font-bold text-yellow-400 mb-6"
               >
                 Ground Engaging Tools (GET)
               </motion.h2>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              <p className="text-md md:text-md text-gray-300 leading-relaxed">
                 At Setlite Engineers Limited, we offer a full range of Ground Engaging Tools (GET) built to perform under pressure. Our lineup includes buckets, teeth, adapters, cutting edges, and other essential components, engineered for mining, construction, agriculture, and high-impact industries.
               </p>
 
-              <h3 className="text-2xl font-semibold text-yellow-400">Why Our GET Components?</h3>
+              <h3 className="text-xl font-semibold text-yellow-400">Why Our GET Components?</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-300">
                 <li>Crafted from high-grade wear-resistant materials</li>
                 <li>Withstands abrasive conditions for longer life</li>
@@ -258,7 +258,7 @@ const generateSlides = (category) => {
                 <li>Smart design for quick replacement & minimal downtime</li>
               </ul>
 
-              <h3 className="text-2xl font-semibold text-yellow-400 mt-8">Black Cat Wear Parts – Trusted Global Manufacturer</h3>
+              <h3 className="text-xl font-semibold text-yellow-400 mt-8">Black Cat Wear Parts – Trusted Global Manufacturer</h3>
               <p className="text-gray-300 leading-relaxed">
                 We proudly supply Black Cat Wear Parts, a globally respected manufacturer of high-quality cutting edges and cast wear parts for all makes of earthmoving equipment. With facilities in Canada, USA, and China, Black Cat ensures reliable performance across its product range.
               </p>
@@ -271,7 +271,7 @@ const generateSlides = (category) => {
                 Known for precision engineering and durability, Black Cat Wear Parts are ideal for operators who demand maximum wear life and consistent performance in the toughest conditions.
               </p>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mt-6">
+              <p className="text-md md:text-md text-gray-300 leading-relaxed mt-6">
                 Whether you need standard wear parts or specialized GET components, Setlite Engineers Limited is your trusted partner in providing reliable, high-performance solutions tailored to your operation.
               </p>
             </div>
@@ -281,13 +281,13 @@ const generateSlides = (category) => {
       {/* Spare Parts Section (only for spares) */}
       {category.id === "spares" && (
         <section className="bg-black text-white py-20 px-6 md:px-20">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             {/* Left Side: Image */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-2xl shadow-2xl border border-neutral-800"
+              className="relative w-full h-[400px] md:h-[400px] overflow-hidden rounded-2xl shadow-2xl border border-neutral-800"
             >
               <Image
                 src="/spare.png"
@@ -303,12 +303,12 @@ const generateSlides = (category) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-4xl font-bold text-yellow-400 mb-6"
+                className="text-xl md:text-xl font-bold text-yellow-400 mb-6"
               >
                 Spare Parts: Global Sourcing Solutions
               </motion.h2>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              <p className="text-md md:text-md text-gray-300 leading-relaxed">
                 At Setlite Engineers Limited, we understand the critical role high-quality parts and 
                 components play in maintaining operational efficiency. In today’s fast-paced, 
                 competitive industrial landscape, access to top-tier parts is essential for ensuring 
@@ -317,15 +317,15 @@ const generateSlides = (category) => {
                 range of parts from trusted, high-quality manufacturers around the world.
               </p>
 
-              <h3 className="text-2xl font-semibold text-yellow-400">Why Choose Setlite Engineers Limited?</h3>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <h3 className="text-xl font-semibold text-yellow-400">Why Choose Setlite Engineers Limited?</h3>
+              <p className="text-gray-300 leading-relaxed text-md">
                 Our global sourcing strategy ensures that we provide only genuine OEM (Original Equipment 
                 Manufacturer) parts, as well as premium aftermarket parts, all meeting the highest 
                 standards of quality, performance, and reliability. Through strategic partnerships with 
                 world-class manufacturers and suppliers, we are able to offer the best components for a 
                 wide range of heavy-duty machinery.
               </p>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-gray-300 leading-relaxed text-md">
                 Whether you need parts from industry giants like Komatsu, Cummins, Caterpillar, Hitachi, 
                 BEML, Doosan, Mitsubishi, or other leading brands, our extensive network ensures that we 
                 can meet your exact specifications—whether you’re looking for common components or 
@@ -333,15 +333,15 @@ const generateSlides = (category) => {
                 needs.
               </p>
 
-              <h3 className="text-2xl font-semibold text-yellow-400">What We Source Globally</h3>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <h3 className="text-xl font-semibold text-yellow-400">What We Source Globally</h3>
+              <p className="text-gray-300 leading-relaxed text-md">
                 What truly differentiates us is our strong network of strategic supplier partnerships 
                 combined with rigorous quality assurance protocols. We are committed to sourcing only 
                 genuine OEM parts, ensuring that every component we deliver meets the exacting 
                 specifications and engineering standards of the original production. This guarantees a 
                 seamless fit, optimal performance, and long-term reliability.
               </p>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-gray-300 leading-relaxed text-md">
                 In addition to OEM components, we also offer a carefully curated selection of 
                 high-quality aftermarket parts from trusted and reputable manufacturers. These alternatives 
                 provide a more cost-effective solution for budget-conscious operations—without sacrificing 
@@ -349,7 +349,7 @@ const generateSlides = (category) => {
                 or aftermarket, you can count on consistent quality and value that supports your 
                 operational efficiency and long-term success.
               </p>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-gray-300 leading-relaxed text-md">
                 Our sourcing capabilities extend to a wide variety of engine components and assemblies, 
                 such as pistons, crankshafts, cylinder heads, turbochargers, fuel pumps, injectors, and 
                 timing systems. Each part is carefully selected and inspected to ensure compatibility 

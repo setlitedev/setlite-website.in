@@ -14,7 +14,7 @@ export default async function ProductPage({ params }) {
     <div className="min-h-screen  bg-[#0D0F12] text-white">
   <section
   className="
-    relative h-screen flex items-center justify-center
+    relative h-[80vh] flex items-center justify-center
     bg-cover bg-center bg-no-repeat
   "
   style={{ backgroundImage: "url('/avban.png')" }}
@@ -23,9 +23,9 @@ export default async function ProductPage({ params }) {
   <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
 
   {/* Container */}
-  <div className="relative w-[85vw] md:w-[75vw] lg:w-[70vw] mx-auto flex flex-col text-left z-10 px-4 sm:px-6 lg:px-8">
+  <div className="relative w-[85vw] md:w-[75vw] lg:w-[70vw] mx-auto flex flex-col text-left z-10 px-4 sm:px-6 lg:px-8 mt-10">
     {/* Heading */}
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl  font-bold mb-6 leading-tight uppercase">
+    <h1 className="text-2xl md:text-[36px]  font-bold mb-6 leading-relaxed uppercase">
       <span className="block text-white">Delivering</span>
       <span className="block text-white">Precision & Power</span>
       <span className="block text-yellow-500">AVTEC TRANSMISSION</span>
@@ -33,7 +33,7 @@ export default async function ProductPage({ params }) {
 
     {/* Paragraph */}
     <div className="max-w-3xl">
-      <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-gray-300 mb-8 leading-relaxed">
+      <p className="text-base sm:text-lg md:text-lg  text-gray-300 mb-8 leading-relaxed">
         AVTEC transmission systems for heavy-duty machines.
       </p>
     </div>
@@ -41,22 +41,22 @@ export default async function ProductPage({ params }) {
 </section>
 
       {/* Title */}
-      <div className="text-center mb-20 mt-20">
+      <div className="text-center mb-20 mt-20 ">
         <div className="flex gap-4 justify-center items-center">
-          <h1 className="text-4xl font-bold tracking-wide text-white drop-shadow-md">
+          <h1 className="text-3xl font-bold tracking-wide text-white drop-shadow-md">
             {product.title1}
           </h1>
-          <h1 className="text-4xl font-bold tracking-wide text-yellow-400 drop-shadow-md">
+          <h1 className="text-3xl font-bold tracking-wide text-yellow-400 drop-shadow-md">
             {product.title2}
           </h1>
         </div>
-        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+        <p className="text-gray-400 mt-4 text-sm max-w-2xl mx-auto">
           {product.description}
         </p>
       </div>
 
       {/* Types Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20 max-w-6xl mx-auto px-4">
         {product.types.map((type, idx) => (
           <div
             key={idx}

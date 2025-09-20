@@ -24,14 +24,14 @@ export default function WhyPartner() {
 
   return (
     <section className="bg-black text-white py-20 px-6 md:px-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
         {/* Left Section */}
         <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl md:text-2xl font-bold text-white mb-6 leading-tight">
             Why Partner with{" "}
             <span className="text-yellow-400">Setlite Engineers Ltd.</span>?
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-4 text-md">
             {[
               "Nationwide Service – Supporting Indian Railways & Metro projects across the country",
               "End-to-End Maintenance – From vehicles to engines, electricals, and attachments",
@@ -49,10 +49,10 @@ export default function WhyPartner() {
 
         {/* Right Section */}
         <div className="md:w-1/2 rounded-2xl p-10 shadow-xl border border-yellow-400/20">
-          <h3 className="text-3xl font-semibold text-yellow-400 mb-6">
+          <h3 className="text-2xl font-semibold text-yellow-400 mb-6">
             Industries We Serve
           </h3>
-          <ul className="space-y-3 text-white text-lg">
+          <ul className="space-y-3 text-white text-md">
             {[
               "Indian Railways",
               "Metro Rail Corporations",
@@ -68,7 +68,7 @@ export default function WhyPartner() {
             ))}
           </ul>
 
-          <p className="mt-8 text-white text-lg leading-relaxed">
+          <p className="mt-8 text-white text-md leading-relaxed">
             <span className="text-yellow-400 font-semibold">
               Setlite Engineers Ltd.
             </span>{" "}
@@ -83,7 +83,7 @@ export default function WhyPartner() {
               href="https://wa.me/919716001002?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20services"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg text-center hover:bg-green-600 transition"
+              className="px-6 py-3 text-sm bg-green-500 text-white font-semibold rounded-lg text-center hover:bg-green-600 transition"
             >
               💬 WhatsApp Us
             </a>
@@ -92,7 +92,7 @@ export default function WhyPartner() {
             <div className="relative inline-block text-left" ref={dropdownRef}>
               <button
                 onClick={() => setOpen(!open)}
-                className="flex items-center justify-between gap-2 px-6 py-3 border border-yellow-400 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition"
+                className="flex text-sm items-center justify-between gap-2 px-6 py-3 border border-yellow-400 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition"
               >
                 📞 Call Us
                 <ChevronDown

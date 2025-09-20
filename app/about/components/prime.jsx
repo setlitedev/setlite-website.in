@@ -9,7 +9,8 @@ const data = [
       `Just as earthmoving machines are the prime movers of industry, we act as the prime mover behind our customers’ success.`,
       `We ensure equipment runs efficiently and reliably, minimizing downtime and maximizing productivity.`,
       `The tagline embodies our promise to deliver confidence, continuity, and long-term value to our clients.`,
-      `Whether it’s keeping a dumper moving in the mines, a dozer shaping infrastructure, or an excavator fueling industrial growth, we stand firmly behind the machines and industries that build India.`,
+      `Whether it’s keeping a dumper moving in the mines, a dozer shaping infrastructure, or an excavator fueling industrial growth,`,
+      `we are dedicated to being the prime mover that powers their operations.`,
     ],
     align: "left",
   },
@@ -36,11 +37,11 @@ const PrimeMovers = () => {
           <div key={index} className="flex flex-col gap-8">
             {/* Text Content */}
             <div className="text-center">
-              <h2 className="text-2xl md:text-4xl font-bold tracking-widest mb-10 mt-10">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-10 mt-10">
                 <span className="text-white">YOUR PRIME </span>
                 <span className="text-yellow-500">MOVERS</span>
               </h2>
-              <div className="space-y-4 text-gray-300  text-center text-lg leading-relaxed">
+              <div className="space-y-4 text-gray-300  text-center text-md leading-relaxed">
                 {item.description.map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}

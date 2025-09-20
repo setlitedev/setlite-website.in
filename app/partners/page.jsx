@@ -10,12 +10,12 @@ export default function PartnersPage() {
       <Partnerhero />
       {/* Header Section */}
       <section className="relative py-24 bg-gradient-to-r from-gray-900 via-black to-gray-950">
-        <div className="max-w-7xl mx-auto text-center px-6">
+        <div className="max-w-6xl mx-auto text-center px-6">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-extrabold tracking-tight"
+            className="text-3xl font-extrabold tracking-tight"
           >
             OUR <span className="text-yellow-400">PARTNERS</span>
           </motion.h1>
@@ -23,7 +23,7 @@ export default function PartnersPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-6 text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="mt-6 text-md text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             We collaborate with world-leading companies to deliver innovative solutions in
             <span className="text-yellow-400"> heavy machinery, mining, construction, and powertrain industries</span>
@@ -46,7 +46,7 @@ export default function PartnersPage() {
               <img
                 src="/t4.png"
                 alt="AVTEC Limited"
-                className="w-full h-[280px] md:h-[320px] object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-[280px] md:h-[280px] object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
           </motion.div>
@@ -58,8 +58,8 @@ export default function PartnersPage() {
             transition={{ duration: 0.8 }}
             className="order-1 md:order-2"
           >
-            <h2 className="text-4xl font-bold text-yellow-400">AVTEC Limited</h2>
-            <p className="mt-4 text-gray-300 leading-relaxed">
+            <h2 className="text-2xl font-bold text-yellow-400">AVTEC Limited</h2>
+            <p className="mt-4 text-md text-gray-300 leading-relaxed">
               Since 2014, Setlite Engineers has been an authorized dealer of
               <span className="text-yellow-400 font-semibold"> AVTEC Limited</span>,
               a leading manufacturer of powertrain and precision-engineered products.
@@ -68,7 +68,7 @@ export default function PartnersPage() {
             </p>
 
             <h3 className="mt-6 text-2xl font-semibold text-white">Capabilities & Brands</h3>
-            <ul className="mt-4 grid gap-2 text-gray-300 list-disc list-inside">
+            <ul className="mt-4 grid gap-2 text-md text-gray-300 list-disc list-inside">
               <li>TT/TRT 2000 Series – wheel loaders, tow tractors, heavy forklifts, rail</li>
               <li>CRT 5633 – compact powershift (up to 430 HP) for railway & utility vehicles</li>
               <li>CT 100 – forklifts (5–10 tons) with versatile shifting options</li>
@@ -97,7 +97,7 @@ export default function PartnersPage() {
 
       {/* Partner: SKL Equipment + Kian Ann */}
       <article className="relative py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -105,7 +105,7 @@ export default function PartnersPage() {
             transition={{ duration: 0.8 }}
             className="order-1"
           >
-            <h2 className="text-4xl font-bold text-yellow-400">SKL Equipment Pvt Ltd</h2>
+            <h2 className="text-2xl font-bold text-yellow-400">SKL Equipment Pvt Ltd</h2>
             <p className="mt-4 text-gray-300 leading-relaxed">
               In 2016, Setlite Engineers partnered with
               <span className="text-yellow-400 font-semibold"> Kian Ann Engineering Pte Ltd</span>,
@@ -157,7 +157,7 @@ export default function PartnersPage() {
               <img
                 src="/t5.png"
                 alt="Kian Ann Engineering"
-                className="w-full h-[300px] md:h-[350px] object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-[200px] md:h-[310px] object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
           </motion.div>
@@ -171,11 +171,11 @@ export default function PartnersPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold"
+          className="text-2xl font-bold"
         >
           Building <span className="text-yellow-400">Strong Partnerships</span>
         </motion.h2>
-        <p className="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-6 text-md text-gray-300 max-w-3xl mx-auto leading-relaxed">
           Our alliances with AVTEC, Kian Ann, and other global leaders enable us to deliver unmatched
           quality, reliability, and innovation across automotive, construction, mining, and heavy equipment
           industries in India and abroad.

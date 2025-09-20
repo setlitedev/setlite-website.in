@@ -37,13 +37,13 @@ export default function ServiceCategories() {
 
       {/* Header */}
       <div className="relative text-center mb-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-wider text-white">
+        <h2 className="text-3xl md:text-[32px] font-bold tracking-wider text-white">
           OUR <span className="text-yellow-400">SERVICES</span>
         </h2>
-        <p className="text-gray-300 mt-4 text-lg md:text-lg leading-relaxed">
+        <p className="text-gray-400 mt-1 text-lg md:text-[15px] leading-relaxed">
           Tailored solutions to maximize{" "}
           <span className="text-yellow-400 font-semibold">uptime</span>, enhance{" "}
-          <span className="text-yellow-400 font-semibold">efficiency</span>, and
+          <span className="text-yellow-400 font-semibold">efficiency</span>,<br /> and
           ensure peak{" "}
           <span className="text-yellow-400 font-semibold">performance</span> for
           engines, transmissions, and heavy-duty machinery.
@@ -84,8 +84,8 @@ export default function ServiceCategories() {
                 }}
                 transition={{ duration: 0.6 }}
                 style={{
-                  width: isCenter ? "70%" : "55%",
-                  height: "100%",
+                  width: isCenter ? "60%" : "45%",
+                  height: "90%",
                 }}
               >
                 {/* Background */}
@@ -105,10 +105,10 @@ export default function ServiceCategories() {
 
                 {/* Content */}
                 <div className="relative z-10 flex flex-col justify-end items-center text-center h-full px-6 pb-10">
-                  <h3 className="text-2xl md:text-[28px] font-bold text-yellow-400 mb-3 uppercase  ">
+                  <h3 className="text-2xl md:text-[24px] font-bold text-yellow-400 mb-3 uppercase  ">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 text-sm md:text-base max-w-[360px] leading-relaxed">
+                  <p className="text-gray-300 text-sm md:text-[14px] max-w-[360px] leading-relaxed">
                     {item.description ||
                       "Premium service crafted to deliver excellence and reliability."}
                   </p>

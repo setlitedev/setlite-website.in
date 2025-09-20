@@ -71,10 +71,10 @@ const Timeline = () => {
     <section className="relative bg-gradient-to-r from-gray-900 via-black to-gray-950 text-white py-20">
       {/* Section Header */}
       <div className="text-center mb-20 px-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-wide">
+        <h2 className="text-3xl md:text-3xl font-extrabold tracking-wide">
           OUR <span className="text-yellow-400">JOURNEY</span>
         </h2>
-        <p className="text-gray-400 mt-3 text-base md:text-md">
+        <p className="text-gray-400 mt-3 text-base md:text-sm">
           A timeline of growth, partnerships, and innovation
         </p>
       </div>
@@ -92,7 +92,7 @@ const Timeline = () => {
             {/* MOBILE: Logo above content */}
             <div className="flex flex-col items-center md:hidden mb-6">
               {(item.logo || item.image) && (
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gray-900 border-4 border-yellow-400 overflow-hidden shadow-lg">
+                <div className="relative w-20 h-20 sm:w-20 sm:h-20 rounded-full bg-gray-900 border-4 border-yellow-400 overflow-hidden shadow-lg">
                   <Image
                     src={item.logo || item.image}
                     alt="timeline"
@@ -107,14 +107,14 @@ const Timeline = () => {
             {item.align === "left" && (
               <>
                 <div className="hidden md:flex w-1/2 justify-end pr-6">
-                  <div className="bg-[#272B30] border border-white/20 text-white p-8 rounded-xl shadow-lg max-w-lg relative transition-all duration-300 hover:scale-[1.02]">
-                    <span className="text-yellow-400 font-bold text-xl md:text-2xl">
+                  <div className="bg-[#272B30] border border-white/20 text-white p-8 rounded-xl shadow-lg max-w-md relative transition-all duration-300 hover:scale-[1.02]">
+                    <span className="text-yellow-400 font-bold text-xl md:text-xl">
                       {item.year}
                     </span>
-                    <h3 className="text-white font-semibold mt-2 text-lg md:text-xl">
+                    <h3 className="text-white font-semibold mt-2 text-lg md:text-lg">
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 text-base md:text-lg mt-3 leading-relaxed">
+                    <p className="text-gray-300 text-base md:text-md mt-3 leading-relaxed">
                       {item.description}
                     </p>
                     <span className="absolute right-[-11px] top-8 w-5 h-5 rounded-full bg-yellow-400 border-4 border-[#0c0e0f]"></span>
@@ -124,7 +124,7 @@ const Timeline = () => {
                 {/* Desktop Circle */}
                 <div className="hidden md:flex flex-col items-center mx-6">
                   {(item.logo || item.image) && (
-                    <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-900 border-4 border-yellow-400 overflow-hidden shadow-lg">
+                    <div className="relative w-30 h-30 md:w-30 md:h-30 rounded-full bg-gray-900 border-4 border-yellow-400 overflow-hidden shadow-lg">
                       <Image
                         src={item.logo || item.image}
                         alt="timeline"
@@ -147,7 +147,7 @@ const Timeline = () => {
                 {/* Desktop Circle */}
                 <div className="hidden md:flex flex-col items-center mx-6">
                   {(item.logo || item.image) && (
-                    <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-900 border-4 border-yellow-400 overflow-hidden shadow-lg">
+                    <div className="relative w-32 h-32 md:w-30 md:h-30 rounded-full bg-gray-900 border-4 border-yellow-400 overflow-hidden shadow-lg">
                       <Image
                         src={item.logo || item.image}
                         alt="timeline"
@@ -159,14 +159,14 @@ const Timeline = () => {
                 </div>
 
                 <div className="hidden md:flex w-1/2 justify-start pl-6">
-                  <div className="bg-[#272B30] border border-white/20 text-white p-8 rounded-xl shadow-lg max-w-lg relative transition-all duration-300 hover:scale-[1.02]">
-                    <span className="text-yellow-400 font-bold text-xl md:text-2xl">
+                  <div className="bg-[#272B30] border border-white/20 text-white p-8 rounded-xl shadow-lg max-w-md relative transition-all duration-300 hover:scale-[1.02]">
+                    <span className="text-yellow-400 font-bold text-xl md:text-xl">
                       {item.year}
                     </span>
-                    <h3 className="text-white font-semibold mt-2 text-lg md:text-xl">
+                    <h3 className="text-white font-semibold mt-2 text-lg md:text-lg">
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 text-base md:text-lg mt-3 leading-relaxed">
+                    <p className="text-gray-300 text-base md:text-md mt-3 leading-relaxed">
                       {item.description}
                     </p>
                     <span className="absolute left-[-11px] top-8 w-5 h-5 rounded-full bg-yellow-400 border-4 border-[#0c0e0f]"></span>

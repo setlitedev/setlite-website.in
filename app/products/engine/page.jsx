@@ -55,7 +55,7 @@ export default function EngineAndTransmissionSections() {
         {/* Tab Buttons */}
         <div className="flex justify-center gap-4 mb-10">
           <button
-            className={`px-8 py-3 text-lg font-semibold border-b-4 transition-colors ${
+            className={`px-8 py-3 text-md font-semibold border-b-4 transition-colors ${
               tab === "engine"
                 ? "border-yellow-400 text-yellow-400"
                 : "border-transparent text-gray-400 hover:text-yellow-400"
@@ -65,7 +65,7 @@ export default function EngineAndTransmissionSections() {
             ENGINE SALES
           </button>
           <button
-            className={`px-8 py-3 text-lg font-semibold border-b-4 transition-colors ${
+            className={`px-8 py-3 text-md font-semibold border-b-4 transition-colors ${
               tab === "transmission"
                 ? "border-yellow-400 text-yellow-400"
                 : "border-transparent text-gray-400 hover:text-yellow-400"
@@ -79,8 +79,8 @@ export default function EngineAndTransmissionSections() {
         {/* ENGINE TAB */}
         {tab === "engine" && (
           <div className="text-center">
-            <h2 className="text-4xl font-bold mb-5">{engineData.title}</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-300 mb-8">
+            <h2 className="text-3xl font-bold mb-5">{engineData.title}</h2>
+            <p className="max-w-3xl mx-auto text-sm text-gray-300 mb-10">
               {engineData.description}
             </p>
 
@@ -115,7 +115,7 @@ export default function EngineAndTransmissionSections() {
 
               {/* Right-side text */}
               <div className="flex-1 text-left">
-                <ul className="list-disc pl-6 text-gray-300 space-y-3 text-lg">
+                <ul className="list-disc pl-6 text-gray-300 space-y-3 text-md">
                   {engineData.engines.map((eng, idx) => (
                     <li key={idx}>
                       <strong>{eng.name}:</strong> {eng.description}
@@ -130,7 +130,7 @@ export default function EngineAndTransmissionSections() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-yellow-400 text-black font-semibold rounded shadow-lg hover:bg-yellow-300 transition"
+              className="inline-block px-8 py-3 text-sm bg-yellow-400 text-black font-semibold rounded shadow-lg hover:bg-yellow-300 transition"
             >
               Contact Our Engine Experts
             </a>
@@ -140,8 +140,8 @@ export default function EngineAndTransmissionSections() {
         {/* TRANSMISSION TAB */}
         {tab === "transmission" && (
           <div className="text-center">
-            <h2 className="text-4xl font-bold mb-5">{engineData.title1}</h2>
-            <p className="max-w-3xl mx-auto text-lg text-gray-300 mb-8">
+            <h2 className="text-3xl font-bold mb-5">{engineData.title1}</h2>
+            <p className="max-w-3xl mx-auto text-sm text-gray-300 mb-12">
               {engineData.transmission.description}
             </p>
 
@@ -176,7 +176,7 @@ export default function EngineAndTransmissionSections() {
 
               {/* Right-side text */}
               <div className="flex-1 text-left">
-                <ul className="list-disc pl-6 text-gray-300 space-y-3 text-lg">
+                <ul className="list-disc pl-6 text-gray-300 space-y-3 text-sm">
                   {engineData.transmission.types.map((type, idx) => (
                     <li key={idx}>
                       <strong>{type.name}:</strong> {type.description}

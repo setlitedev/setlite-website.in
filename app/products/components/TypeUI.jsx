@@ -76,7 +76,7 @@ export default function TypeUI({ type }) {
           {/* SPECS */}
           <div className="mt-8 space-y-3">
             {type.specs?.map((spec, i) => (
-              <p key={i} className="flex items-center gap-2 text-gray-300 text-xl">
+              <p key={i} className="flex items-center gap-2 text-gray-300 text-md">
                 <span className="text-yellow-400">
                   &#10003; <strong>{spec.label}:</strong> {spec.value}
                 </span>
@@ -84,24 +84,24 @@ export default function TypeUI({ type }) {
             ))}
           </div>
 
-          <button className="mt-6 bg-white text-black px-20 py-4 rounded-lg shadow-lg font-semibold hover:bg-yellow-400 hover:text-black transition">
+          <button className="mt-6 bg-white text-black px-14 py-3 rounded-lg shadow-lg font-semibold hover:bg-yellow-400 hover:text-black transition">
             View Specs
           </button>
         </div>
 
         {/* RIGHT SECTION */}
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">
             {type.name}
           </h1>
 
           {type.description && (
-            <p className="text-gray-300 leading-relaxed mb-8">
+            <p className="text-gray-300 leading-relaxed mb-8 text-md">
               {type.description}
             </p>
           )}
 
-          <h2 className="text-xl font-bold text-white mb-4">
+          <h2 className="text-lg font-bold text-white mb-4">
             FOR QUERIES ABOUT THIS PRODUCT
           </h2>
           <form
