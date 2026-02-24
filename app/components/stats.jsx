@@ -18,6 +18,8 @@ const Geography = dynamic(
   { ssr: false }
 );
 
+import { ShieldCheck, BadgeCheck, Package, Globe, Award, Headphones } from "lucide-react";
+
 // 🌍 World topojson data
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
@@ -30,32 +32,32 @@ const StatsSection = () => {
     {
       title: "ISO Certified",
       description: "Meeting global quality standards",
-      icon: require("lucide-react").ShieldCheck,
+      icon: ShieldCheck,
     },
     {
       title: "ZED Certified",
       description: "Zero Defect Zero Effect manufacturing compliance",
-      icon: require("lucide-react").BadgeCheck,
+      icon: BadgeCheck,
     },
     {
       title: "Trusted Supplier",
       description: "Over 1,00,000+ parts supplied worldwide",
-      icon: require("lucide-react").Package,
+      icon: Package,
     },
     {
       title: "Global Network",
       description: "Supplying to 50+ countries",
-      icon: require("lucide-react").Globe,
+      icon: Globe,
     },
     {
       title: "30+ Years Experience",
       description: "Three decades of expertise",
-      icon: require("lucide-react").Award,
+      icon: Award,
     },
     {
       title: "Customer Support",
       description: "24/7 assistance worldwide",
-      icon: require("lucide-react").Headphones,
+      icon: Headphones,
     },
   ];
 
